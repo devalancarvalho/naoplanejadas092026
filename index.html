@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Não Planejadas 09/2026 — Time PCM</title>
+<style>
+  :root{
+    --bg:#e9ebee; --card:#ffffff; --ink:#1c2430; --ink-soft:#5b6470; --line:#dde1e6;
+    --navy:#16233d; --navy-2:#223357; --accent:#a5321f; --accent-soft:#f4e3df;
+    --automotiva:#1c4d63; --industrial:#4a3b7a; --varejo:#14603e;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:Calibri,'Segoe UI',Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .page{max-width:1080px;margin:0 auto;padding:0 24px 80px;}
+
+  header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#f1f3f6;margin-bottom:36px;border-radius:0 0 18px 18px;padding:52px 40px 40px;}
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:24px;margin-bottom:24px;}
+  .brand{font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#b9c2cf;font-weight:600;}
+  .hero h1{font-size:32px;margin:10px 0 6px;font-weight:700;letter-spacing:-0.01em;}
+  .hero .subtitle{color:#c7ceda;font-size:16px;margin:0;}
+  .hero-meta{display:flex;gap:36px;flex-wrap:wrap;}
+  .hero-meta div{min-width:120px;}
+  .hero-meta .label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#9aa5b5;margin-bottom:4px;}
+  .hero-meta .value{font-size:16px;font-weight:600;color:#f4f6f8;}
+  .stats-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .stat-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:16px 22px;flex:1;min-width:150px;}
+  .stat-box .num{font-size:28px;font-weight:700;color:#fff;}
+  .stat-box .cap{font-size:12.5px;color:#b9c2cf;margin-top:2px;}
+
+  .area-heading{display:flex;align-items:baseline;gap:10px;margin:48px 0 6px;}
+  .area-heading .bar{width:5px;height:20px;border-radius:3px;}
+  .area-heading h1.area{font-size:13px;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;color:var(--ink-soft);margin:0;}
+  .section-title{display:flex;align-items:center;gap:12px;margin:22px 0 16px;}
+  .section-title .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+  .section-title h2{font-size:19px;font-weight:700;margin:0;color:var(--ink);}
+  .section-title .count{margin-left:auto;font-size:12.5px;color:var(--ink-soft);background:#fff;border:1px solid var(--line);padding:3px 10px;border-radius:20px;}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(20,25,35,0.04);}
+  .item{display:grid;grid-template-columns:100px 1fr;gap:18px;padding:16px 22px;border-bottom:1px solid var(--line);}
+  .item:last-child{border-bottom:none;}
+  .item .os{padding-top:2px;}
+  .item .os .num{font-size:14px;font-weight:700;color:var(--ink);}
+  .item .desc .title{font-size:14.5px;color:var(--ink);display:block;}
+  .item .desc .meta{font-size:12.5px;color:var(--ink-soft);margin-top:4px;display:block;}
+  .item .desc .tags{display:block;margin-top:6px;}
+
+  .tag{display:inline-block;margin-right:6px;font-size:10.5px;font-weight:700;letter-spacing:0.03em;text-transform:uppercase;padding:2px 7px;border-radius:4px;}
+  .tag.erro{background:var(--accent);color:#fff;}
+  .tag.impl{background:#1c4d63;color:#fff;}
+  .tag.plat{background:#e7edf5;color:var(--navy-2);}
+  .tag.rodobras{background:var(--accent-soft);color:var(--accent);}
+  .tag.semos{background:#eef0f2;color:var(--ink-soft);margin-right:0;}
+
+  .area-automotiva .bar,.cat-automotiva .dot{background:var(--automotiva);}
+  .area-industrial .bar,.cat-industrial .dot{background:var(--industrial);}
+  .area-varejo .bar,.cat-varejo .dot{background:var(--varejo);}
+
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:640px){.item{grid-template-columns:1fr;}.hero{padding:36px 22px 28px;}.hero h1{font-size:26px;}}
+  @media print{body{background:#fff;}header.hero{border-radius:0;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <div class="brand">CS Compusoftware</div>
+        <h1>Fechamento de Projeto — Time PCM</h1>
+        <p class="subtitle">Demandas não planejadas</p>
+      </div>
+      <div class="hero-meta">
+        <div><div class="label">Product Owner</div><div class="value">Ivo</div></div>
+        <div><div class="label">Equipe</div><div class="value">Time PCM</div></div>
+        <div><div class="label">Período</div><div class="value">Setembro / 2026</div></div>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="num">28</div><div class="cap">Demandas atendidas</div></div>
+      <div class="stat-box"><div class="num">24</div><div class="cap">Com O.S. formalizada</div></div>
+      <div class="stat-box"><div class="num">4</div><div class="cap">Sem O.S.</div></div>
+      <div class="stat-box"><div class="num">8</div><div class="cap">Módulos envolvidos</div></div>
+    </div>
+  </header>
+
+  <div class="area-heading area-automotiva">
+    <span class="bar"></span>
+    <h1 class="area">Automotiva</h1>
+  </div>
+
+  <div class="section-title cat-automotiva">
+    <span class="dot"></span>
+    <h2>Manutenção Automotiva</h2>
+    <span class="count">9 itens</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="num">107855</span></div>
+      <div class="desc"><span class="title">Erro na visualização por card na Manutenção Automotiva (Web).</span><span class="meta">Card 84165 · Tela 1292</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">106817</span></div>
+      <div class="desc"><span class="title">Ajuste referente a equipamento com troca de óleo e coleta para análise realizada.</span><span class="meta">Card 82260 · Tela 8388</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108379</span></div>
+      <div class="desc"><span class="title">Erro envolvendo os campos Data Inicial / Data Final na análise.</span><span class="meta">Card 84994 · Tela 1292</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108269</span></div>
+      <div class="desc"><span class="title">Ajustes solicitados pela unidade após a liberação da release.</span><span class="meta">Card 84841 · Tela 3710</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="tag semos">Sem O.S.</span></div>
+      <div class="desc"><span class="title">Ajuste no processo de geração de SS, Programação de Manutenção e OS, mantendo a rastreabilidade com os respectivos IDs.</span><span class="meta">Card 84791</span><span class="tags"></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">105549</span></div>
+      <div class="desc"><span class="title">Ao incluir agregado na versão Web, permitir a definição do código do agregado.</span><span class="meta">Card 80273 · Tela 8542</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">107293</span></div>
+      <div class="desc"><span class="title">Correção na pesquisa de OS nos cards do CS 4.0.</span><span class="meta">Card 83141 · Tela 1292</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">107090</span></div>
+      <div class="desc"><span class="title">Ajuste na validação da entrega de ferramentas.</span><span class="meta">Card 82788 · Tela 9795</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">106755</span></div>
+      <div class="desc"><span class="title">Erro em relatório da tela 5834.</span><span class="meta">Card 82250 · Tela 5834</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+  </div>
+
+  <div class="section-title cat-automotiva">
+    <span class="dot"></span>
+    <h2>Controle de Pneus</h2>
+    <span class="count">1 item</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="tag semos">Sem O.S.</span></div>
+      <div class="desc"><span class="title">Mover o botão Problemas da modal do cadastro de pneu para a página inicial do cadastro.</span><span class="meta">Card 84402</span><span class="tags"></span></div>
+    </div>
+  </div>
+
+  <div class="section-title cat-automotiva">
+    <span class="dot"></span>
+    <h2>Motomecanização</h2>
+    <span class="count">1 item</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="num">107701</span></div>
+      <div class="desc"><span class="title">Relatório não exibe a cultura (GEF 1.3.1, safra 26).</span><span class="meta">Card 83863 · Tela 7739</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+  </div>
+
+  <div class="section-title cat-automotiva">
+    <span class="dot"></span>
+    <h2>Posto</h2>
+    <span class="count">2 itens</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="num">106291</span></div>
+      <div class="desc"><span class="title">Criação de automação solicitada pela Diretoria CS, acionada quando o envio de dados é interrompido.</span><span class="meta">Card 81374 · Tela 7949</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108388</span></div>
+      <div class="desc"><span class="title">Ajuste nos totais exibidos ao final do relatório por bomba.</span><span class="meta">Card 84996 · Tela 8109</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+  </div>
+
+  <div class="section-title cat-automotiva">
+    <span class="dot"></span>
+    <h2>Controle de Manutenção</h2>
+    <span class="count">2 itens</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="num">106973</span></div>
+      <div class="desc"><span class="title">Melhoria no cadastro dos planos de preventiva.</span><span class="meta">Card 82445</span><span class="tags"></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">107659</span></div>
+      <div class="desc"><span class="title">Alteração da regra da tela 4617 para os tipos de material 5 (Montagem) e 6.</span><span class="meta">Card 83855 · Tela 4617</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+  </div>
+
+  <div class="area-heading area-industrial">
+    <span class="bar"></span>
+    <h1 class="area">Industrial</h1>
+  </div>
+
+  <div class="section-title cat-industrial">
+    <span class="dot"></span>
+    <h2>Manutenção Industrial</h2>
+    <span class="count">5 itens</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="num">107934</span></div>
+      <div class="desc"><span class="title">Alinhamento dos filtros da Manutenção Industrial ao padrão da Manutenção Automotiva.</span><span class="meta">Card 84490 · Tela 7320</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">107686</span></div>
+      <div class="desc"><span class="title">Erro em Processos &gt; Ferramentas &gt; Controle de Ferramentas.</span><span class="meta">Card 83861 · Tela 9795</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">106651</span></div>
+      <div class="desc"><span class="title">Erro ao gerar o relatório Controle de Chapisco.</span><span class="meta">Card 81977 · Tela 9683</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">107991</span></div>
+      <div class="desc"><span class="title">Inclusão de filtro na tela inicial Web 4.0 - Indústria.</span><span class="meta">Card 84311 · Tela 3631</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">106830</span></div>
+      <div class="desc"><span class="title">Relatório de fechamento CTE do Checklist não exibe uma das informações.</span><span class="meta">Card 82264 · Tela 7875</span><span class="tags"><span class="tag erro">Erro</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+  </div>
+
+  <div class="area-heading area-varejo">
+    <span class="bar"></span>
+    <h1 class="area">Varejo</h1>
+  </div>
+
+  <div class="section-title cat-varejo">
+    <span class="dot"></span>
+    <h2>Controle de Caixas</h2>
+    <span class="count">1 item</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="tag semos">Sem O.S.</span></div>
+      <div class="desc"><span class="title">Alterações Rodobras.</span><span class="meta">Card 78424</span><span class="tags"><span class="tag rodobras">Rodobras</span></span></div>
+    </div>
+  </div>
+
+  <div class="section-title cat-varejo">
+    <span class="dot"></span>
+    <h2>Controle de Retaguarda</h2>
+    <span class="count">7 itens</span>
+  </div>
+  <div class="card">
+    <div class="item">
+      <div class="os"><span class="num">108235</span></div>
+      <div class="desc"><span class="title">Desenvolvimento de nova consulta no CS PDV.</span><span class="meta">Card 84739 · Tela 7064</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Desktop</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108359</span></div>
+      <div class="desc"><span class="title">Melhoria no relatório de Regra de Preço.</span><span class="meta">Card 84953 · Tela 2963</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span><span class="tag rodobras">Rodobras</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">106300</span></div>
+      <div class="desc"><span class="title">Desenvolvimento das integrações dos processos Rodobank + Trocopay.</span><span class="meta">Card 81265</span><span class="tags"></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="tag semos">Sem O.S.</span></div>
+      <div class="desc"><span class="title">Alterações gerais do Retaguarda e PDV.</span><span class="meta">Card 83586</span><span class="tags"></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108363</span></div>
+      <div class="desc"><span class="title">Desenvolvimento do processo de inativação na Tabela de Preço.</span><span class="meta">Card 84955 · Tela 2963</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108365</span></div>
+      <div class="desc"><span class="title">Novas opções de visualização de processos, junto às já disponíveis.</span><span class="meta">Card 84957 · Tela 6823</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span></span></div>
+    </div>
+    <div class="item">
+      <div class="os"><span class="num">108096</span></div>
+      <div class="desc"><span class="title">Quadro de Resumo agrupado por produto/descrição ao final do relatório CS.</span><span class="meta">Card 84538 · Tela 2827</span><span class="tags"><span class="tag impl">Implantação</span><span class="tag plat">Web</span></span></div>
+    </div>
+  </div>
+
+  <footer>
+    <span>CS Compusoftware — Time PCM</span>
+    <span>Não Planejadas · Setembro / 2026 · PO: Ivo</span>
+  </footer>
+
+</div>
+</body>
+</html>
